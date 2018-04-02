@@ -1,6 +1,6 @@
 [package]
 name = "defer"
-description = "Utility to defer excecution of code, inspired by go's defer statement.
+description = "Utility to defer excecution of code, inspired by go's defer statement."
 version = "0.1.0"
 documentation = "https://docs.rs/defer/"
 repository = "https://github.com/andrewhickman/defer/"
