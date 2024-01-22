@@ -1,10 +1,11 @@
 [package]
 name = "defer"
 description = "Utility to defer excecution of code, inspired by go's defer statement."
-version = "0.1.0"
+version = "0.2.0"
 documentation = "https://docs.rs/defer/"
 repository = "https://github.com/andrewhickman/defer/"
 license = "MIT/Apache-2.0"
-authors = ["Andrew Hickman <andrew.hickman1@sky.com>"]
+authors = ["Andrew Hickman <andrew.hickman1@sky.com>", "Zakarum <zaq.dev@icloud.com>"]
+edition = "2021"
 
 [dependencies]
