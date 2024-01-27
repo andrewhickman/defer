@@ -1,3 +1,5 @@
+#![no_std]
+
 use core::mem::ManuallyDrop;
 
 /// Defer execution of a closure until the return value is dropped.
@@ -27,7 +29,7 @@ macro_rules! defer {
 
 #[test]
 fn test() {
-    use std::cell::RefCell;
+    use core::cell::RefCell;
 
     let i = RefCell::new(0);
 
@@ -41,7 +43,7 @@ fn test() {
 
 #[test]
 fn test_macro() {
-    use std::cell::RefCell;
+    use core::cell::RefCell;
 
     let i = RefCell::new(0);
 
