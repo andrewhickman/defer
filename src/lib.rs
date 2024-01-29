@@ -1,3 +1,5 @@
+#![no_std]
+
 use core::mem::ManuallyDrop;
 
 /// Defer execution of a closure until the return value is dropped.
@@ -27,7 +29,7 @@ macro_rules! defer {
 
 #[test]
 fn test() {
-    use std::cell::RefCell;
+    use core::cell::RefCell;
 
     let i = RefCell::new(0);
 
@@ -41,14 +43,18 @@ fn test() {
 
 #[test]
 fn test_macro() {
-    use std::cell::RefCell;
+    use core::cell::RefCell;
 
     let i = RefCell::new(0);
+    let k = RefCell::new(0);
 
     {
         defer!(*i.borrow_mut() += 1);
+        defer!(*k.borrow_mut() += 1);
         assert_eq!(*i.borrow(), 0);
+        assert_eq!(*k.borrow(), 0);
     }
 
     assert_eq!(*i.borrow(), 1);
+    assert_eq!(*k.borrow(), 1);
 }
